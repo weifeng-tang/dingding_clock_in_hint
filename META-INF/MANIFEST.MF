@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.dingding.clockin.hint.ListeningKeyboard
+Class-Path: jintellitype-1.3.9.jar
+
