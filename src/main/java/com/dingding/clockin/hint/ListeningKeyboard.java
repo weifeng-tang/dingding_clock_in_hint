@@ -19,9 +19,8 @@ public class ListeningKeyboard {
     private static final int GLOBAL_HOT_KEY_WIN_L = 129;
 
     public static void main(String[] args) {
-        new Thread(()->{
-            cronTiming();
-        }).run();
+        //定时提示, 周一到周五18:00提示下班打卡
+        timingHint();
         //监听键盘
         JIntellitype.getInstance().registerHotKey(GLOBAL_HOT_KEY_WIN_L,
                 JIntellitype.MOD_CONTROL, (int) 'L');
@@ -54,6 +53,12 @@ public class ListeningKeyboard {
                 }
             }
         });
+    }
+
+    private static void timingHint() {
+        new Thread(()->{
+            cronTiming();
+        }).run();
     }
 
     public static void cronTiming(){
