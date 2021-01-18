@@ -73,7 +73,7 @@ public class ListeningKeyboard {
                     .newTrigger()
                     .withIdentity("triggerName1", "groupName1")
                     .withSchedule(
-                            CronScheduleBuilder.cronSchedule("0 04 18 ? * 2-6"))
+                            CronScheduleBuilder.cronSchedule("0 0 18 ? * 2-6"))
                     .build();
             scheduler.scheduleJob(job, trigger);
 
